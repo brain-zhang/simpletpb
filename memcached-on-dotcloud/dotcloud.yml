@@ -1,0 +1,9 @@
+memcached:
+  type: custom
+  process: memcached -p $PORT_MEMCACHED
+  systempackages: 
+    - memcached
+  ports:
+    memcached: tcp
+www:
+  type: python

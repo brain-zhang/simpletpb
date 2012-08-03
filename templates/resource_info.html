@@ -1,0 +1,43 @@
+$def with(content)
+$:render.header()
+<div class="box">
+    <div class="box">
+        <h3>资源信息由爬虫自动搜集于网络，可能由于抓取的原因，部分资源和描述不符，我们会尽快修正</h3>
+        <p>感谢豆瓣提供开放API</p>
+    </div>
+    <div id="resource_info" class="box">
+        <br />
+        <ul>
+            <li>详细信息:</li>
+            <li>
+                <img src="$content['imgURL']" alt="封面">
+            </li>
+            <li>
+                评分:$content['rating']
+            </li>
+            <li>
+                名称:$content['aka']
+            </li>
+            <li>
+                发行时间:$content['pubdate']
+            </li>
+            <li>
+                国家:$content['country']
+            </li>
+            <li>
+                导演:$content['director']
+            </li>
+            <li>
+                介绍:$content['summary']
+            </li>
+            <li>
+                <p>资料地址:</p>
+                <a href="$content['sourceURL']">$content['sourceURL']</a>
+            </li>
+            <li>
+                <p><a href="/resourcegroup/$content['resource_info_id']">Download</a></p>
+            <li>
+        </ul>
+    </div>
+</div>
+$:render.foot() 

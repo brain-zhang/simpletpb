@@ -1,0 +1,98 @@
+$def with (typeL1=None, typeL2=None)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        $if typeL1 and typeL2:
+            <title>$config.site_name--$typeL1-$typeL2</title>
+        $elif typeL1 and not typeL2:
+            <title>$config.site_name--$typeL1</title>
+        $else:
+            <title>$config.site_name</title>
+        
+        <meta name="keywords" content="simpletpb P2P, 磁力下载,magnet下载,美剧,日剧,韩剧,电影,高清电影,游戏,DVDrip,720P,1080P" />
+        <meta name="description" content="磁力下载  轻巧的资源下载站" />
+        <link href="$config.static/styles/reset.css" rel="stylesheet" type="text/css" />
+        <link href="$config.static/styles/index/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="$config.static/js/ajax.js" ></script>     
+    </head>
+    <body>
+        <div class="page">
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="#" onclick="javascript:window.external.AddFavorite('http://www.simpletpb.com','最好的资源下载站')" title="收藏本站到你的收藏夹">收藏本站</a>
+                    </li>                    
+                    <li>
+                        <a href="/help">帮助</a>
+                    </li>
+                    <li>
+                        <a href="http://hi.baidu.com/simpletpb/home" target="blank">建议</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header box">
+                <h1><span><a href="/">$config.site_name</a></span></h1>
+                <h2><span>轻巧的资源聚合站点</span></h2>
+            </div>
+            <div class="search box">
+                <form method="get" action="/search" name="f">
+                    <span>全站搜索:</span>
+                    <input type="text" name="wd" id="kw" maxlength="100"> 
+                    <select name="searchtype">
+                        <option value="All">全部</option>
+                        <option value="Audio">音频</option>
+                        <option value="Video">视频</option>
+                        <option value="Applications">软件</option>
+                        <option value="Games">游戏</option>
+                        <option value="Other">其它</option>
+                    </select>
+                    <input type="submit" id="su">
+                    <span id="sx"><a href="#">手写</a></span> 
+                </form>
+                
+                <!-- 手写板 -->
+                <script> 
+                    var w = window,d = document,n = navigator,k = d.f.wd 
+                    if (w.attachEvent) { 
+                    w.attachEvent("onload", function() {k.focus();}) 
+                    } else { 
+                    w.addEventListener('load', function() {k.focus()},true) 
+                    }; 
+                    var hw = {}; 
+                    hw.i = d.getElementById("sx"); 
+                    var il = false; 
+                    if (/msie (\d+\.\d)/i.test(n.userAgent)) { 
+                    hw.i.setAttribute("unselectable", "on") 
+                    } else { 
+                    var sL = k.value.length; 
+                    k.selectionStart = sL; 
+                    k.selectionEnd = sL 
+                    } 
+                    hw.i.onclick = function(B) { 
+                    var B = B || w.event; 
+                    B.stopPropagation ? B.stopPropagation() : (B.cancelBubble = true); 
+                    if (d.selection && d.activeElement.id && d.activeElement.id == "kw") { 
+                    hw.hasF = 1 
+                    } else { 
+                    if (!d.selection) { 
+                    hw.hasF = 1 
+                    } 
+                    } 
+                    if (!il) { 
+                    var A = d.createElement("script"); 
+                    A.setAttribute("src", "http://www.baidu.com/hw/hwInput.js"); 
+                    d.getElementsByTagName("head")[0].appendChild(A); 
+                    il = true; 
+                    } 
+                    }; 
+                </script> 
+                <!-- 手写板 END-->
+                
+            </div>
+            <div id="sharetools">
+                <!-- JiaThis Button BEGIN -->
+                <script type="text/javascript" src="http://v2.jiathis.com/code/jiathis_r.js?move=0" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+            </div>
+            <div class="main box">

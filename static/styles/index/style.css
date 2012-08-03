@@ -1,0 +1,111 @@
+body { background:#EEE; }
+.box {  margin:10px auto; margin-bottom:40px;}
+.minibox {  margin:0px auto; width:900px; }
+.clear { clear:both; }
+.float_left { float:left; }
+.float_right { float:right; }
+.left { text-align:left; }
+.right { text-align:right; }
+.center { text-align:center; }
+.url { background:url(images/website.png) no-repeat right; padding-right:20px; }
+.tips { color:#CCC; }
+.v_top { vertical-align:top; }
+.qq { background:url(images/qq.png) no-repeat right; padding-right:20px; }
+.msn { background:url(images/msn.png) no-repeat right; padding-right:20px; }
+.email { background:url(images/email.png) no-repeat right; padding-right:20px; }
+.tips { color:#666; }
+.long_txt { width:98%; }
+.must_be { color:red !important; }
+.magDown a{ display:block; width:60px; position:relative; }
+textarea { line-height:1.5em; }
+
+
+image { border:none; }
+p { line-height:1.5em; }
+
+a { color:#3366CC; text-decoration:underline; }
+a:hover { color:#FF3300; }
+
+table{ border:1px solid #aaa; }
+table thead tr{ background-color:#8FC629; }
+
+table tr { margin:5px auto; border:1px solid #ccc; }
+table tr td{ margin:5px 5px; padding:3px 0px; }
+
+.resource_name { width:55% }
+.typeL1 { width:80px;}
+.typeL2 { width:90px; }
+.magnet { width:50px; }
+.size { width:60px; }
+.info { width:30px; }
+.scoretd{ width:120px;}
+.score p{ width:110px; float:right; }
+
+.dig {  margin:0px 2px; border-radius: 5px 5px 5px 5px; color: #FFFFFF; font-size: 1.0em; padding: 3px 5px; }
+.bury { background: none repeat scroll 0 0 #990000; }
+.like { background: none repeat scroll 0 0 #56C750; }
+.like:hover{ background:#005000; }
+.bury:hover{ background:#D90000; }
+
+/* 热门 */
+#hottype{ margin:5px auto; margin-bottom:10px; }
+#hottype ul{ margin:auto 20px;list-style-type:none; font-size:1.0em;  width:880px; overflow:hidden; }
+#hottype ul li{list-style-type:none; padding:10px; float:left; display:inline; }
+#hottype ul li a { padding:8px 10px; background:#0D58A6; color:#fff; border-right:1px solid #000; margin-bottom: 5px; border-radius: 5px 5px 5px 5px; }
+#hottype ul li a:hover{ background:#000067; }
+
+/* 页码显示 */
+#navpages { float:right; margin-right:30px; margin-bottom:10px; margin-top:10px; }
+
+.page { width:960px; margin:10px auto; background:#FFF; padding:10px 20px 30px 20px; border:1px solid #CCC; border-radius:5px; }
+
+    #nav { clear:both; float:right; margin-top:50px; margin-right:20px;  }
+    #nav ul{list-style-type:none; font-size:1.3em;  margin-bottom: 5px; }
+    #nav ul li{list-style-type:none; padding:5px; float:left; }
+        
+    .header { padding-top:10px; border-bottom:1px solid #CCC; }
+        .header h1 { font-size:2.5em; }
+        .header a { color:#333; text-decoration:none; }
+
+    .main {  }
+        .main_content { }
+
+			.box h2 { padding-bottom:5px; margin-bottom:10px; font-weight:400; color:green; font-size:2.2em;}
+				
+
+
+
+    .foot { border-top:1px solid #CCC; color:#666; padding-top:10px; font-size:0.8em; }
+        .foot img { vertical-align:top; }
+        #footinfo { float:right; }
+        #counttools{ text-align:center; }
+
+/*主页 */
+.browseContainer { text-align: center; font-family: Verdana, Helvetica; font-size: 1em; }
+.browseContainer a { color: #009; text-decoration: none; }
+.browseContainer a:hover { border-bottom: 1px solid #009; }
+.browseContainer dt { font-weight: bold; font-size: 1em; margin-bottom: 5px; clear: both; }
+
+.tv .browseContainer dt { line-height: 1.4em; font-size: 1.3em; }
+.tv .browseContainer dd { line-height: 1.4em; }
+.tv .browseContainer .categoriesContainer { width:      33%; }
+
+.browseContainer dd { margin: 0 0 15px 10px; float: left; font-size: 1.2em; }
+.browseContainer .categoriesContainer { text-align: left; vertical-align: top; padding: 15px; width: 50%; }
+* html .categoriesContainer a { display: inline-block; }
+
+dt#upload a{ color: #080; }
+dt#upload a:hover { border-bottom: 1px solid #080; }
+
+dt#latest a{ color: #080; }
+dt#latest a:hover { border-bottom: 1px solid #080; }
+
+dt#showall a{ color: #080; }
+dt#showall a:hover { border-bottom: 1px solid #080; }
+
+#categoriesTable { width: 880px; height: auto; border: 0; text-align: center; margin: 20px auto; }
+
+/*介绍页*/
+#resource_info { margin:10px 10px; margin-bottom:20px;  border: 1px solid #000; padding: 5px;}
+#resource_info ul{list-style-type:none; font-size:1.5em;  margin-bottom: 5px; }
+#resource_info ul li{list-style-type:none; padding:5px; }

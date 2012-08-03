@@ -1,0 +1,9 @@
+memcached:
+  type: custom
+  process: memcached -p $PORT_MEMCACHED
+  systempackages: 
+    - memcached
+  ports:23928
+    memcached: tcp://memcached-memorybox.dotcolud.com
+www:
+  type: python

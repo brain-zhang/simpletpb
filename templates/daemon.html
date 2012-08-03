@@ -1,0 +1,23 @@
+$def with(content)
+$:render.header()
+<div class="box">
+    <h2>目前支持以下格式:</h2>
+    <p>
+        "http://labaia.ws/top":抓取top100所有类别链接
+    </p>
+    <p>
+        "http://labaia.ws/browse/104/":抓取此分类下100页链接
+    </p>
+    <p>
+        "http://labaia.ws/top/202":抓取此页面下所有链接
+    </p>
+    <br />
+    <form method="post">
+        <input type="text" id="startURL" name="startURL">
+        <input type="submit" value="开始抓取">
+    </form>
+    <p>
+        $content
+    </p>
+</div>
+$:render.foot() 

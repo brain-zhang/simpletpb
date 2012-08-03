@@ -1,0 +1,91 @@
+﻿$def with(hottype_cache)
+$:render.header()
+$:render.hottype(hottype_cache) <h3>浏览--分类查看</h3>
+<div class="browseContainer">
+	<table id="categoriesTable">
+		<tbody>
+			<tr>
+				<td class="categoriesContainer">
+				<dl>
+					<dt>
+						<a href="tpbtop/Audio" title="Audio">音频</a>
+					</dt>
+					<dd>
+						<span style="white-space:nowrap;"><a href="tpbtop/Audio/Music" title="Music">音乐</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Audio/Audio books" title="Audio books">有声读物</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Audio/Sound clips" title="Sound clips">声音剪辑</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Audio/FLAC" title="FLAC">FLAC</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Audio/Other" title="Other">其他</a></span>
+					</dd>
+					<dt>
+						<a href="tpbtop/Video" title="Video">视频</a>
+					</dt>
+					<dd>
+						<span style="white-space:nowrap;">
+							<a href="tpbtop/Video/Movies" title="Movies">电影</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Movies DVDR" title="Movies DVDR">DVD转存</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/RMVB电影" title="RMVB电影">RMVB电影</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/美剧" title="美剧">美剧</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/日剧" title="日剧">日剧</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/动画" title="动画">动画</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/1080P电影" title="1080P电影">1080P电影</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/打包" title="打包">打包</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/公开课" title="公开课">公开课</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/纪录片" title="纪录片">纪录片</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/HR-HDTV电影" title="HR-HDTV电影">HR-HDTV电影</a></span>,
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Music videos" title="Music videos">音乐视频</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Movie clips" title="Movie clips">视频剪辑</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/TV shows" title="TV shows">电视</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Handheld" title="Handheld">手持</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Highres - Movies" title="Highres - Movies">高清电影</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Highres - TV shows" title="Highres - TV shows">高清电视</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/3D" title="3D">3D</a></span>, 
+							<span style="white-space:nowrap;"><a href="tpbtop/Video/Other" title="Other">其他</a></span>
+					</dd>
+					<dt>
+						<a href="tpbtop/Applications" title="Applications">应用程序</a>
+					</dt>
+					<dd>
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/Windows" title="Windows">Windows</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/Mac" title="Mac">Mac</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/UNIX" title="UNIX">UNIX</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/Handheld" title="Handheld">手持</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/IOS (iPad/iPhone)" title="IOS (iPad/iPhone)">IOS (iPad/iPhone)</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/Android" title="Android">Android</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Applications/Other OS" title="Other OS">其他</a></span>
+					</dd>
+				</dl></td>
+				<td class="categoriesContainer">
+				<dl>
+					<dt>
+						<a href="tpbtop/Games" title="Games">游戏</a>
+					</dt>
+					<dd>
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/PC Games" title="PC">PC</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/Mac" title="Mac">Mac</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/PSx" title="PSx">PSx</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/XBOX360" title="XBOX360">XBOX360</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/Wii" title="Wii">Wii</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/Handheld" title="Handheld">手持</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/IOS (iPad/iPhone)" title="IOS (iPad/iPhone)">IOS (iPad/iPhone)</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/Android" title="Android">Android</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Games/Other" title="Other">其他</a></span>
+					</dd>
+					<dt>
+						<a href="tpbtop/Other" title="Other">其他</a>
+					</dt>
+					<dd>
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/E-books" title="E-books">电子书</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/Comics" title="Comics">漫画</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/Pictures" title="Pictures">图片</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/Covers" title="Covers">封面</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/Physibles" title="Physibles">Physibles</a></span>, 
+						<span style="white-space:nowrap;"><a href="tpbtop/Other/Other" title="Other">其他</a></span>
+					</dd>
+				</dl></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+$:render.foot() 

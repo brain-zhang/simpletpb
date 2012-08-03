@@ -1,0 +1,10 @@
+$def with(content)
+<h3>热点推荐--请点击下面的按钮随便看看:)</h3>
+<div id="hottype" class="browseContainer">
+    <ul>
+        <li><a href="recent">最近更新</a></li>
+        $for item in content:
+            <li><a href="tpbtop/$item['typeL1']/$item['typeL2']">$item['typeL2']</a></li>
+    </ul>
+</div>
+<br />
