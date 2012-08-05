@@ -3,9 +3,9 @@
 
 from config.settings import alldbname, infodbname
 import web
-database = "../database/tpbmirror_v2_only_douban.db"
-db = web.database(dbn='sqlite', db=database)
-
+from config.settings import util_db
+#database = "../database/tpbmirror_v2_only_douban.db"
+#db = web.database(dbn='sqlite', db=database)
 """
     我们需要干以下工作 ：
     以resource_info表为标准，在all_resource表中找到相应的资源id，更新到resource_info表中

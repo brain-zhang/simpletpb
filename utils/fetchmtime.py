@@ -7,6 +7,7 @@ from BeautifulSoup import BeautifulSoup
 from getopt import *
 import sys
 import time
+from config.settings import util_db
 
 class CFetchmtime():
     """
@@ -20,9 +21,10 @@ class CFetchmtime():
     
     def __init__(self, url):
         self.url = url
-        database = "../database/tpbmirror.db"
-        self.db = web.database(dbn='sqlite', db=database)
-
+        #database = "../database/tpbmirror.db"
+        #self.db = web.database(dbn='sqlite', db=database)
+        self.db = util_db
+        
     def magic_fetch_and_insert(self):
 #        headers = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #                   'Accept-Encoding': 'gzip, deflate',

@@ -7,6 +7,8 @@ import time
 from xml.dom import minidom
 import web
 
+from config.settings import util_db
+
 class CFetchDouban():
     """
         从豆瓣上抓取电影、音乐的评论及评分
@@ -16,8 +18,9 @@ class CFetchDouban():
     _music_info = {}
     _book_info = {}
     
-    database = "../database/tpbmirror.db"
-    db = web.database(dbn='sqlite', db=database)   
+    #database = "../database/tpbmirror.db"
+    #db = web.database(dbn='sqlite', db=database)
+    db = util_db
     
     support_type = {'Audio':'http://api.douban.com/music/subjects',
                     'Movie':'http://api.douban.com/movie/subjects',

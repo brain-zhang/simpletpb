@@ -13,4 +13,9 @@ urls = (
     '/resourceinfoid/.*',   pre_fix + 'view.resource_info',
     '/resourcegroup/.*',    pre_fix + 'view.resource_group',    
     '/fetch',               pre_fix + 'daemon.daemon_fetch',
+    
+    #------------------定时抓取任务--------------------
+    '/cron/fetchrecenttpb',     'utils.fetchtpb.index',
+    '/cron/fetchtoptpb',        'utils.scheming.index',
+    '/cron/fetchoabt',          'utils.fetchoabt.index',
 )

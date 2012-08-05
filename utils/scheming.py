@@ -26,6 +26,11 @@ def scheming_fetch_tpb_all():
         except:
             print 'fetch err url:%s' %(url)
             continue
+        
+class index():
+    def GET(self):    
+        scheming_fetch_tpb_top()    
+        return 'OK'
 
 if __name__ == '__main__':
     scheming_fetch_tpb_top()

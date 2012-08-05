@@ -117,6 +117,12 @@ def fetch_recent(begin, end):
             print 'fetch err url:%s' % (url)
             continue
 
+
+class index():
+    def GET(self):
+        fetch_recent(0, 100)
+        return 'OK'
+
 """"
 抓取海盗湾
 使用方法:
