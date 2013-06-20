@@ -71,6 +71,18 @@ class index():
         #util_db.query('delete from all_resource where typeL1=""')
         return 'OK'
 
+    def POST(self):
+        urllist = ['http://oabt.org/index.php?page=' + str(i) for i in range(0, 10)]
+        for url in urllist:
+            try:
+                oabt = CFetchoabt(url)
+                oabt.magic_fetch_and_insert()
+                time.sleep(10)
+            except:
+                print "Err,url:%s" % (url)
+                continue
+        #util_db.query('delete from all_resource where typeL1=""')
+        return 'OK'
 
 """"
 抓取oabt

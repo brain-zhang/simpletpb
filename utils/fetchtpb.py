@@ -48,25 +48,25 @@ def get_recent_url(begin, end, startURL = 'http://labaia.ws/recent/'):
     for i in range(begin, end - begin + 1):
         urllist.append(url_base + str(i))
     return urllist
-    
+
 
 def fetch(url, dbname = alldbname):
     """
         根据指定的url抓取资源信息，存到数据库中
         此页面必须是直接有链接的页面
-    """ 
+    """
     try:
         doc = urllib2.urlopen(url, timeout=10)
     except:
         print 'open url Err, url:%s' % (url)
-        return    
+        return
     try:
         soup = BeautifulSoup.BeautifulSoup(doc.read())
-        souptrs = BeautifulSoup.BeautifulSoup(str(soup.findAll('tr'))) 
+        souptrs = BeautifulSoup.BeautifulSoup(str(soup.findAll('tr')))
     except:
-        print 'BeautifulSoup Err' 
+        print 'BeautifulSoup Err'
         return
-    
+
     for tr in souptrs.contents[2:]:
         if hasattr(tr, 'name'):
             #获取资源名称，类别，链接地址及大小
@@ -84,23 +84,23 @@ def fetch(url, dbname = alldbname):
                 sizelazy = ''.join(font[0].contents[0])
                 #获取大小，不用费心看了，严重依赖于格式
                 size = sizelazy[sizelazy.find('Size') + 5:sizelazy.find('iB') + 2].replace(ur'&nbsp;', '')
-                
+
                 #判定hotrank
                 hotrank = hotrank_tpb_weighted
                 if url.find('top') > 0:
                     hotrank += hotrank_top_weighted
-                
+
                 print "name:%s, typeL1:%s, typeL2:%s, size:%s" % (name, typeL1, typeL2, size)
                 util_db.insert('all_resource', resource_name = name,
-                                                 typeL1 = typeL1, typeL2 = typeL2, magnet = magnet, size = size, 
+                                                 typeL1 = typeL1, typeL2 = typeL2, magnet = magnet, size = size,
                                                  hotrank = hotrank, extern_info = 'False', language = 'EN', ed2k = '')
             except:
                 i = i + 1
-                print 'fetch resouce url Err, url:%s' % (url) 
+                print 'fetch resouce url Err, url:%s' % (url)
                 if i > 3:
                     break
-                
-#just for test                
+
+#just for test
 def fetch_all(urllist, begin, end):
     for url in urllist:
         try:
@@ -120,9 +120,12 @@ def fetch_recent(begin, end):
 
 class index():
     def GET(self):
-        fetch_recent(0, 100)
+        fetch_recent(0, 10)
         return 'OK'
 
+    def POST(self):
+        fetch_recent(0, 100)
+        return 'OK'
 """"
 抓取海盗湾
 使用方法:
@@ -134,6 +137,6 @@ if __name__ == '__main__':
     print args[0], args[1]
 #    fetch('http://labaia.ws/top/602')
 #    startURL = 'http://labaia.ws/browse/'
-#    urllist = get_allURL(startURL) 
+#    urllist = get_allURL(startURL)
     fetch_recent(int(args[0]), int(args[1]))
 

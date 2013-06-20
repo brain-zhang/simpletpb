@@ -54,7 +54,7 @@ def get_top_records(typeL1 = 'Video', typeL2 = None, offset = 0):
 def get_hot_types():
     "取得当前热门分类(typeL2)"
     #sql_query = 'select typeL1,typeL2,avg(hotrank) from all_resource where hotrank<>0 group by typeL2 order by avg(hotrank) DESC limit ' + str(hot_tags)
-    sql_query = 'select typeL1,typeL2,avg(hotrank) from all_resource where hotrank<>0 group by typeL2 limit ' + str(hot_tags)
+    sql_query = 'select typeL1,typeL2,avg(hotrank) from all_resource where hotrank<>0 and typeL1<>"" group by typeL2 limit ' + str(hot_tags)
     return _memchache_get_records(sql_query, time = 20)
 
 def search_all_resource(name, resource_type = 'All', limit=200):

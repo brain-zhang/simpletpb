@@ -5,7 +5,7 @@ import models
 import os
 
 #如果是在本地调试，请打开此开关，如果上传到sae，请置为False
-LOCAL_DEBUG = True
+LOCAL_DEBUG = False
 LOCAL_MYSQL_DEBUG = False
 
 if LOCAL_DEBUG:
@@ -20,7 +20,7 @@ else:
     import sae
     app_root = os.path.dirname(__file__)
     templates_root = os.path.join(app_root, '../templates')
-    db = web.database(dbn='mysql', db=sae.const.MYSQL_DB, host=sae.const.MYSQL_HOST, \
+    db = web.database(dbn='mysql', db=sae.const.MYSQL_DB, host=sae.const.MYSQL_HOST, 
         port=int(sae.const.MYSQL_PORT),user=sae.const.MYSQL_USER, pw=sae.const.MYSQL_PASS)
     util_db = db
 
@@ -58,7 +58,7 @@ total_count_limit = 1000
 #显示最近更新的条目
 recent_count_limit = 1000
 
-web.config.debug = False
+web.config.debug = True
 
 config = web.storage(
     static = '/static',

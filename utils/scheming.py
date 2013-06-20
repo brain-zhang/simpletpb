@@ -8,7 +8,7 @@ def scheming_fetch_tpb_top():
     "抓取Top100功能"
 
     startURL = 'http://labaia.ws/top/'
-    urllist = fetchtpb.get_topURL(startURL) 
+    urllist = fetchtpb.get_topURL(startURL)
     print urllist
 
     for url in urllist:
@@ -16,9 +16,9 @@ def scheming_fetch_tpb_top():
 
 def scheming_fetch_tpb_all():
     "抓取所有页面功能"
-    
+
     startURL = 'http://labaia.ws/browse/'
-    urllist = fetchtpb.get_allURL(startURL) 
+    urllist = fetchtpb.get_allURL(startURL)
 
     for url in urllist:
         try:
@@ -26,10 +26,14 @@ def scheming_fetch_tpb_all():
         except:
             print 'fetch err url:%s' %(url)
             continue
-        
+
 class index():
-    def GET(self):    
-        scheming_fetch_tpb_top()    
+    def GET(self):
+        scheming_fetch_tpb_top()
+        return 'OK'
+
+    def POST(self):
+        scheming_fetch_tpb_top()
         return 'OK'
 
 if __name__ == '__main__':
