@@ -8,7 +8,7 @@ This project was created and lead by memorybox <memoryboxes@gmail.com>.
 About simpletpb
 ----------------
 
-python + webpy搭建的爬虫，用于镜像海盗湾。 目前运行在sae上。
+python + webpy搭建的爬虫，用于镜像海盗湾。 目前运行在sae上(因为新浪SAE策略调整，正在迁移中，填坑中)。
 
 http://simpletpbmirror.sinaapp.com/
 
